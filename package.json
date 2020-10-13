@@ -14,7 +14,7 @@
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "Jonathan Bonnefoy",
+  "author": "Jonathan Bonnefoy<contact@e-weap.fr>",
   "license": "MIT",
   "devDependencies": {
     "@capacitor/android": "^2.4.2",
@@ -56,9 +56,9 @@
   "swiftlint": "@ionic/swiftlint-config",
   "repository": {
     "type": "git",
-    "url": "git@github.com:eweap/capacitor-cookies-flush.git"
+    "url": "https://github.com/eweap/capacitor-cookies-flush.git"
   },
   "bugs": {
-    "url": "git@github.com:eweap/capacitor-cookies-flush.git/issues"
+    "url": "https://github.com/eweap/capacitor-cookies-flush/issues"
   }
 }
