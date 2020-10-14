@@ -1,20 +1,21 @@
 package com.eweap.plugins;
 
-import com.getcapacitor.JSObject;
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 
+import android.webkit.CookieManager;
+import android.os.Build.VERSION;
+
 @NativePlugin
 public class CookiesFlush extends Plugin {
-
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
-        JSObject ret = new JSObject();
-        ret.put("value", value);
-        call.success(ret);
+    public void flush(PluginCall call) {
+        if (VERSION.SDK_INT >= 21) {
+            CookieManager.getInstance().flush();
+        }
+        
+        call.success();
     }
 }

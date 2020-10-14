@@ -9,9 +9,8 @@ export class CookiesFlushWeb extends WebPlugin implements CookiesFlushPlugin {
     });
   }
 
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  flush(): Promise<void> {
+    return Promise.resolve();
   }
 }
 

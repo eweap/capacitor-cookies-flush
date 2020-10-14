@@ -8,10 +8,7 @@ import Capacitor
 @objc(CookiesFlush)
 public class CookiesFlush: CAPPlugin {
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.success([
-            "value": value
-        ])
+    @objc func flush(_ call: CAPPluginCall) {
+        call.success()
     }
 }

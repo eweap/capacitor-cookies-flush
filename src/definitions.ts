@@ -5,5 +5,5 @@ declare module '@capacitor/core' {
 }
 
 export interface CookiesFlushPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  flush(): Promise<void>;
 }
