@@ -5,10 +5,11 @@ import Capacitor
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
-@objc(CookiesFlush)
-public class CookiesFlush: CAPPlugin {
+@objc(CookiesFlushPlugin)
+public class CookiesFlushPlugin: CAPPlugin {
+    private let implementation = CookiesFlush()
 
     @objc func flush(_ call: CAPPluginCall) {
-        call.success()
+        call.resolve()
     }
 }
